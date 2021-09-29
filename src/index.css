@@ -1,13 +1,230 @@
 body {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
+  font-family: 'Work Sans', sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  color: #1A2842
 }
 
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
+}
+
+#mainRow {
+  margin: 3% 8%;
+  margin-bottom: 8%;
+}
+
+h1 {
+  font-family: 'Work Sans', sans-serif;
+  color: #1A2842;
+  font-size: 30;
+}
+
+h2 {
+  font-family: 'Work Sans', sans-serif;
+  color: #1A2842;
+  font-weight: 800;
+}
+
+h3 {
+  font-family: 'Work Sans', sans-serif;
+  color: #1A2842;
+  font-size: 28px;
+}
+
+h4 {
+  font-family: 'Work Sans', sans-serif;
+  color: #1A2842;
+  font-size: 28px;
+}
+
+.textLoop {
+  color: #E5792A;
+  font-style: italic;
+  font-size: 28px;
+  font-weight: 700;
+  margin:0
+}
+
+.customButton {
+  color: #282828;
+  font-family: 'Work Sans', sans-serif;
+  background-color: #68CAFF;
+  font-weight: 800;
+  font-size: 1.75vw;
+  border-radius: 1.75vw;
+  padding: 0.2vw 1.75vw;
+  border-width: 0.2vw;
+  border-color: #282828;
+  margin-top: 10%;
+  box-shadow: -0.4vw 0.4vw 0px;
+  margin-bottom: 0.3vw;
+  margin-left: 0.3vw;
+}
+
+.customButton:hover {
+  background-color: #18A7F4;
+}
+.pGrande{
+  font-family: 'Work Sans', sans-serif;
+  color: #1A2842;
+  font-size: 1.62vw;
+}
+
+#circle {
+  width: 38%;
+  z-index: -100;
+  position: absolute;
+  left: 50%;
+  margin-left: -19%;
+  margin-top:-95px
+}
+
+.logoF{
+  filter: invert(99%) sepia(51%) saturate(2%) hue-rotate(261deg) brightness(116%) contrast(100%);
+  width: 5%; 
+  display: block; 
+  margin-left: auto; 
+  margin-right: auto; 
+  padding-top: 40px;
+  padding-bottom: 20px;
+}
+
+.pChica{
+  font-family: 'Work Sans', sans-serif;
+  color: #FFFF;
+  font-size: 16px;
+  margin: 0;
+  padding-bottom: 10px;
+}
+
+.pModal{
+  font-family: 'Work Sans', sans-serif;
+  color: #1A2842;
+  font-size: 14px;
+  margin: 0
+}
+#mainH1 {
+  font-weight: 700;
+  font-size: 5vw;
+  margin-bottom: 6%;
+  line-height: 1;
+}
+.description{
+  margin-left: 15px;
+}
+#h2final{
+font-weight: 700;
+font-size: 51px;
+text-align: center;
+margin: auto;
+width: 44%;
+}
+#h4final{
+  font-weight: 700;
+  font-size: 28px;
+  text-align: center;
+  margin: auto;
+  width: 44%;
+}
+
+#illusFot{
+width: 30%;
+display:block;
+margin-left: auto;
+margin-right: auto;
+margin-top: 18%;
+}
+
+#h2mid{
+font-weight: 700;
+font-size: 3.75vw;
+margin-bottom: 0%;
+text-align: center;
+}
+
+#h31 {
+  margin: 0;
+}
+#h32 {
+  margin: 0;
+}
+
+#h4title{
+  font-weight: 700;
+  font-size: 2vw;
+  margin:0
+}
+@media screen and (max-width: 992px) {
+  #mainRow{
+    margin: 5% 0%;
+    text-align: center;
+    margin-bottom: 35%;
+  }
+  #mainH1{
+    font-size:11.5vw;
+  }
+  #h2mid{
+    margin-top: 10%;
+    font-size: 9vw;
+  }
+  .customButton{
+    margin-top: 5%;
+  }
+  .description{
+    margin-left: 0px;
+  }
+  #circle {
+    width: 75%;
+    z-index: -100;
+    position: absolute;
+    left: 50%;
+    margin-left: -37.5%;
+    margin-top:50px
+  }
+  #h2final{
+    padding-top: 50px;
+    padding-bottom: 50px;
+    width: 90%;
+    font-size: 8vw;
+  }
+  #h4final{
+    padding-top: 50px;
+    padding-bottom: 100px;
+    width: 90%;
+    font-size: 5vw;
+    font-weight: 100;
+  }
+  #illusFot{
+    width: 70%;
+  }
+  #h31 {
+    font-size: 6vw;
+    margin: 0;
+  }
+  #h32 {
+    font-size: 6vw;
+    margin: 0;
+  }
+  .textLoop{
+    font-size: 6vw;
+    margin: 0;
+  }
+  .customButton{
+    font-size: 6vw;
+    border-radius: 6vw;
+    padding: 0.7vw 6vw;
+    border-width: 0.9vw;
+    box-shadow: -0.9vw 0.9vw 0px;
+  }
+  #h4title{
+    font-size: 8vw;
+  }
+  .pGrande{
+    font-family: 'Work Sans', sans-serif;
+    color: #1A2842;
+    font-size: 6.48vw;
+  }
 }
