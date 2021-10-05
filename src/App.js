@@ -1,4 +1,4 @@
-import { Container, Row, Col, Modal} from "react-bootstrap";
+import { Container, Row, Col, Modal, Spinner } from "react-bootstrap";
 import './App.css';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import logo from './assets/LOGOTIPO.svg';
@@ -15,19 +15,44 @@ import illusFot from './assets/ILLUS FOOTER.png';
 import logoFot from './assets/ISO LOGO.svg';
 import smiley from './assets/SMILEY.png';
 import {useState} from "react"
+import axios from "axios";
+
 
 
 function App() {
   const [show, setShow] = useState(false);
+  const [loading, setLoading] = useState(false);
   const [sent, setSent] = useState(false);
+  const [name, setName] = useState("")
+  const [email, setEmail] = useState("")
+
 
   const handleClose = () => {
+    setName("")
+    setEmail("")
     setSent(false)
     setShow(false)
   };
-  const handleShow = () => setShow(true);
-  const handleSent = () => setSent(true)
 
+  function validateEmail(email) {
+    const re = /^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
+    return re.test(String(email).toLowerCase());
+  }
+
+  const handleShow = () => setShow(true);
+  const handleSent = async () => {
+    setLoading(true)
+    await axios.post("/users", {name:name , email:email})
+    setSent(true)
+    setLoading(false)
+  }
+
+  const updateName = (e)=>{
+    setName(e.target.value)
+  }
+  const updateEmail = (e)=>{
+    setEmail(e.target.value)
+  }
   return (
     <Container fluid style={{padding: 0}}>
       <Modal show={show} onHide={handleClose}>
@@ -41,13 +66,19 @@ function App() {
               <p class="pModal">A Genti ainda está na versão beta e temos coisinhas para ajustar. Se você quiser fazer parte dessa jornada/experimento e ter um primeiro encontro, deixe seus dados e entraremos em contato.</p>
               <div style={{marginTop:"6%"}}>
                 <h4 style={{float:"left", fontSize: "16px", fontWeight: "700", marginRight: "15%", marginBottom: "8px"}}>Nome</h4><p class="pModal">O nome pelo qual iremos te chamar</p>
-                <input style={{width: "100%", borderRadius:"5px", borderWidth: "1px", marginTop:"1%", marginBottom: "8px"}}></input>
+                <input onChange={updateName} style={{width: "100%", borderRadius:"5px", borderWidth: "1px", marginTop:"1%", marginBottom: "8px"}}></input>
               </div>
               <div style={{marginTop:"3%"}}>
                 <h4 style={{float:"left", fontSize: "16px", fontWeight: "700", marginRight: "15%", marginBottom: "8px"}}>Email</h4><p class="pModal">É assim que a Genti entra em contato com você</p>
-                <input style={{width: "100%", borderRadius:"5px", borderWidth: "1px", marginTop:"1%"}}></input>
+                <input onChange={updateEmail} style={{width: "100%", borderRadius:"5px", borderWidth: "1px", marginTop:"1%"}}></input>
               </div>
-              <button class="customButton" type="button" onClick={handleSent} style={{margin: "6% auto", display:"block"}}>Enviar solicitação</button>
+              <button disabled={!name || !email || !validateEmail(email)} class="customButton" type="button" onClick={handleSent} style={{margin: "6% auto", display:"block"}}>
+                {loading ? 
+                (<Spinner animation="border" role="status">
+                    <span className="visually-hidden">Loading...</span>
+                  </Spinner>) 
+                : "Enviar solicitação"}
+                </button>
               <p class="pModal" style={{textAlign: "center"}}>Tem dúvidas ou sugestões? Email pra Genti no <span style={{color:"#E5792A"}}>hello@genti.io</span> </p>
             </Modal.Body>
           </>)

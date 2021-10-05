@@ -3,7 +3,8 @@ body {
   font-family: 'Work Sans', sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  color: #1A2842
+  color: #1A2842;
+  background-color: #fdfdfd;
 }
 
 code {
@@ -12,8 +13,10 @@ code {
 }
 
 #mainRow {
-  margin: 3% 8%;
+  margin: 3% auto;
   margin-bottom: 8%;
+  max-width: 1160px;
+  background-color: #fdfdfd;
 }
 
 h1 {
@@ -53,15 +56,19 @@ h4 {
   font-family: 'Work Sans', sans-serif;
   background-color: #68CAFF;
   font-weight: 800;
-  font-size: 1.75vw;
-  border-radius: 1.75vw;
-  padding: 0.2vw 1.75vw;
-  border-width: 0.2vw;
+  font-size: 24px;
+  border-radius: 24px;
+  padding: 3px 24px;
+  border-width: 3px;
   border-color: #282828;
   margin-top: 10%;
-  box-shadow: -0.4vw 0.4vw 0px;
-  margin-bottom: 0.3vw;
-  margin-left: 0.3vw;
+  box-shadow: -6px 6px 0px;
+  margin-bottom: 4.5px;
+  margin-left: 4.5px;
+}
+
+.buttonGroup:active{
+  background-color: #c07520;
 }
 
 .customButton:hover {
@@ -70,15 +77,24 @@ h4 {
 .pGrande{
   font-family: 'Work Sans', sans-serif;
   color: #1A2842;
-  font-size: 1.62vw;
+  font-size: 21px;
+}
+
+button:disabled,
+button:disabled:hover,
+button[disabled]{
+  box-shadow: 0 0 0 0px;
+  margin-bottom: 0vw;
+  margin-left: 0vw;
+  background-color: #adadad;
 }
 
 #circle {
-  width: 38%;
+  width: 490px;
   z-index: -100;
   position: absolute;
   left: 50%;
-  margin-left: -19%;
+  margin-left: -245px;
   margin-top:-95px
 }
 
@@ -108,7 +124,7 @@ h4 {
 }
 #mainH1 {
   font-weight: 700;
-  font-size: 5vw;
+  font-size: 67px;
   margin-bottom: 6%;
   line-height: 1;
 }
@@ -140,7 +156,7 @@ margin-top: 18%;
 
 #h2mid{
 font-weight: 700;
-font-size: 3.75vw;
+font-size: 47px;
 margin-bottom: 0%;
 text-align: center;
 }
@@ -154,10 +170,10 @@ text-align: center;
 
 #h4title{
   font-weight: 700;
-  font-size: 2vw;
+  font-size: 28px;
   margin:0
 }
-@media screen and (max-width: 992px) {
+@media screen and (max-width: 991px) {
   #mainRow{
     margin: 5% 0%;
     text-align: center;
@@ -220,11 +236,11 @@ text-align: center;
     box-shadow: -0.9vw 0.9vw 0px;
   }
   #h4title{
-    font-size: 8vw;
+    font-size: 6vw;
   }
   .pGrande{
     font-family: 'Work Sans', sans-serif;
     color: #1A2842;
-    font-size: 6.48vw;
+    font-size: 5vw;
   }
 }
