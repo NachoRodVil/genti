@@ -61,7 +61,6 @@ h4 {
   padding: 3px 24px;
   border-width: 3px;
   border-color: #282828;
-  margin-top: 10%;
   box-shadow: -6px 6px 0px;
   margin-bottom: 4.5px;
   margin-left: 4.5px;
@@ -74,12 +73,42 @@ h4 {
 .customButton:hover {
   background-color: #18A7F4;
 }
+
+.customButton:active{
+  background-color: #18A7F4;
+  box-shadow: 0px 0px 0px;
+  border-width: 4px;
+  margin-bottom: 0px;
+  margin-left: 0px;
+}
+
+.preload .customButton {
+  color: #282828;
+  font-family: 'Work Sans', sans-serif;
+  background-color: #68CAFF;
+  font-weight: 800;
+  font-size: 24px;
+  border-radius: 24px;
+  padding: 3px 24px;
+  border-width: 3px;
+  border-color: #282828;
+  margin-top: 10%;
+  box-shadow: 0px 0px 0px;
+  margin-bottom: 0px;
+  margin-left: 0px;
+}
+
 .pGrande{
   font-family: 'Work Sans', sans-serif;
   color: #1A2842;
   font-size: 21px;
 }
 
+.h3new{
+  font-size: 36px;
+  font-weight: 600;
+
+}
 button:disabled,
 button:disabled:hover,
 button[disabled]{
@@ -98,6 +127,25 @@ button[disabled]{
   margin-top:-95px
 }
 
+#newDiv{
+  max-width: 800px;
+  text-align: center;
+  background-color: #F9F8EC;
+  margin: 0 auto
+}
+
+#voltar{
+  font-weight: 700;
+  font-size: 28px;
+  margin-left: auto;
+  margin-top: 5%;
+  margin-bottom: 5%;
+  text-align: center;
+}
+#voltar:hover{
+  color: #E5792A;
+}
+
 .logoF{
   filter: invert(99%) sepia(51%) saturate(2%) hue-rotate(261deg) brightness(116%) contrast(100%);
   width: 5%; 
@@ -114,6 +162,13 @@ button[disabled]{
   font-size: 16px;
   margin: 0;
   padding-bottom: 10px;
+}
+
+.pChica2{
+  font-family: 'Work Sans', sans-serif;
+  color: #E5792A;
+  font-size: 14px;
+  margin: 0;
 }
 
 .pModal{
@@ -148,6 +203,7 @@ width: 44%;
 
 #illusFot{
 width: 30%;
+max-width: 500px;
 display:block;
 margin-left: auto;
 margin-right: auto;
@@ -224,6 +280,11 @@ text-align: center;
     font-size: 6vw;
     margin: 0;
   }
+  .h3new{
+    font-size: 8vw;
+    font-weight: 600;
+  
+  }
   .textLoop{
     font-size: 6vw;
     margin: 0;
@@ -242,5 +303,8 @@ text-align: center;
     font-family: 'Work Sans', sans-serif;
     color: #1A2842;
     font-size: 5vw;
+  }
+  #newDiv{
+    margin: 15% auto
   }
 }
